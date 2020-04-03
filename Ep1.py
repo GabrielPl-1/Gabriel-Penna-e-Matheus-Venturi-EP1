@@ -43,7 +43,7 @@ while fichas>0:
                         else:
                             print ('você ganhou '+ str(2*h)+ 'fichas')
                             fichas= fichas+(2*h)
-                    elif x=='any crops':
+                    elif x=='any craps':
                         j=int(input('quanto você quer apostar ? '))
                         fichas = fichas - j
                         if soma2==2 or soma2==3 or soma2==7:
@@ -71,7 +71,7 @@ while fichas>0:
             else:
                 print ('você ganhou ' + str(2*e) + 'fichas')
                 fichas = fichas+(2*e)
-        elif b=='any crops':
+        elif b=='any craps':
             f=int(input('Quanto você quer apostar ?'))
             fichas = fichas - f 
             if soma==2 or soma==3 or soma==7:
@@ -79,3 +79,15 @@ while fichas>0:
                 fichas = fichas + (7*f)
             else:
                 print ('você perdeu ' + str(f) + ' moedas')
+        elif b=='twelve':
+            g = int(input('quanto você quer apostar ? ' ))
+            fichas = fichas - g
+            if soma==12:
+                a=print ('você ganhou ' + str(12*g) + ' fichas')
+                fichas = fichas + (12*g)
+            else:
+                print ('você perdeu ' + str(g) + ' fichas')
+    else:
+        print (1*'isso não é um tipo de aposta, volte mais tarde')
+if fichas==0:
+    print('Suas fichas acabaram')
