@@ -57,3 +57,25 @@ while fichas>0:
                             print ('Você ganhou' + str(12*r)+ 'fichas')
                         else:
                             print ('Você perdeu' + str(r)+ 'fichas')
+        elif b=='fields':
+            e= int(input('Quanto você quer apostar ? '))
+            fichas=fichas-e
+            if soma == 2:
+                print("você ganhou" + str(5*e) + "fichas")
+                fichas=fichas+(4*e)
+            elif soma == 12:
+                print ('você ganhou' + str(3*e)+ ' fichas')
+                fichas=fichas+(3*e)
+            elif soma == 5 or soma==6 or soma==7 or soma==8:
+                print ("você perdeu "+ str(e) + " fichas")
+            else:
+                print ('você ganhou ' + str(2*e) + 'fichas')
+                fichas = fichas+(2*e)
+        elif b=='any crops':
+            f=int(input('Quanto você quer apostar ?'))
+            fichas = fichas - f 
+            if soma==2 or soma==3 or soma==7:
+                print ('você ganhou' + str(7*f)+ ' fichas')
+                fichas = fichas + (7*f)
+            else:
+                print ('você perdeu ' + str(f) + ' moedas')
